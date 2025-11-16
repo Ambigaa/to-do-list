@@ -1,0 +1,126 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#7f7fd5,#86a8e7,#91eae4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.wrapper{
+    width:380px;
+    padding:25px;
+    background:rgba(255,255,255,0.2);
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+    backdrop-filter:blur(15px);
+    animation:fadeIn 0.5s ease;
+}
+
+.title{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    font-size:28px;
+    font-weight:600;
+}
+
+/* Input area */
+.input-area{
+    display:flex;
+    background:white;
+    padding:10px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.input-area input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:10px;
+    font-size:16px;
+    border-radius:10px;
+}
+
+.input-area button{
+    width:45px;
+    border:none;
+    background:#4caf50;
+    color:white;
+    font-size:22px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.input-area button:hover{
+    background:#3e8c41;
+    transform:scale(1.1);
+}
+
+/* Task list */
+#taskList{
+    list-style:none;
+    margin-top:20px;
+}
+
+#taskList li{
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+    animation:slideUp 0.4s ease;
+}
+
+#taskList li span{
+    font-size:16px;
+    color:#333;
+}
+
+/* Buttons inside list */
+.buttons button{
+    margin-left:7px;
+    padding:6px 10px;
+    font-size:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+
+.done-btn{ background:#4caf50; }
+.edit-btn{ background:#3498db; }
+.save-btn{ background:#2ecc71; display:none; }
+.delete-btn{ background:#e74c3c; }
+
+/* Completed */
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.95);}
+    to{opacity:1; transform:scale(1);}
+}
+
+@keyframes slideUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
